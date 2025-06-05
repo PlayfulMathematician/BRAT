@@ -26,7 +26,7 @@ if brat_dir != current_dir:
 
 def get_json():
     try:
-        with open("./project_data/projects.json", "r") as f:
+        with open("./data/projects.json", "r") as f:
             return json.load(f)
     except FileNotFoundError:
         sys.exit("BRAT CLI is not initialized, use init to set up BRAT CLI")
@@ -56,5 +56,5 @@ def main():
         add_project(args.file)
     elif args.command == "init":
         init_brat()
-if __name__ == "__main__":
-  main()
+def entry_point():
+    main()
