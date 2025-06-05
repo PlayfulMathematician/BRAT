@@ -5,14 +5,17 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
-        "sounddevice",
-        "numpy",
-        "scipy",
-        "platformdirs"
+        "cffi==1.17.1",
+        "keyboard==0.13.5",
+        "numpy==2.2.6",
+        "platformdirs==4.3.8",
+        "pycparser==2.22",
+        "scipy==1.15.3",
+        "sounddevice==0.5.2",
     ],
     entry_points={
         "console_scripts": [
-            "BRAT=brat.cli:main",  # Uppercase command
+            "BRAT=brat.cli:main",
         ],
     },
     author="bringupyourpost",
