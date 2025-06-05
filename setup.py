@@ -1,30 +1,23 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="brat-cli",
+    name="BRAT",
     version="0.1.0",
-    packages=find_packages(),  # Automatically finds the 'brat' package
+    packages=find_packages(),
     install_requires=[
         "sounddevice",
         "numpy",
         "scipy",
-        "platformdirs",  # optional but recommended
+        "platformdirs"
     ],
     entry_points={
         "console_scripts": [
-            "brat=brat.cli:entry_point",  # Makes `brat` runnable in terminal
+            "BRAT=brat.cli:main",  # Uppercase command
         ],
     },
     author="bringupyourpost",
-    description="Bringupyourpost's Recorder Audio Thing - CLI for audio recording projects",
-    long_description=open("README.md").read(),
+    description="BRAT - Bringupyourpost's Recorder Audio Thing",
+    long_description=open("README.md").read() if __name__ == "__main__" and open("README.md", "r") else "",
     long_description_content_type="text/markdown",
     python_requires=">=3.7",
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "Operating System :: OS Independent",
-        "Environment :: Console",
-        "Intended Audience :: End Users/Desktop",
-    ],
-    include_package_data=True,
 )
